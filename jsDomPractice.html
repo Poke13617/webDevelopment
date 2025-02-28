@@ -17,19 +17,29 @@
         //AppendChild
         var footNote = document.createElement("p");
         footNote.innerHTML = "1. From page 5 of <i>Frankenstein</i>";
+        
         // add the child
         document.body.appendChild(footNote);
 
         //add another paragraph
         var para = document.getElementById("para") ;
         para.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cupiditate, sunt assumenda inventore libero ex deserunt et porro illo beatae optio.";
+        
         //add another footnote
         var footNote2 = document.createElement("p");
         footNote2.innerHTML = "2. Lorem Ipsum from <i>Lorem Ipsum</i>";
+        
         //add the child
-        document.body.appendChild(footNote2)
+        document.body.appendChild(footNote2);
 
 
+        //use insertBefore()
+        var subTitle = document.createElement("h2");
+        subTitle.innerHTML = "This is my subtitle";
+
+        //capture the elements we want to add our h2 before
+        //see para variable above
+        document.body.insertBefore("subTitle, para")
     </script>
 </body>
 </html>
