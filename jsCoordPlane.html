@@ -38,7 +38,9 @@
         function getXY(e)
         {
                 var x = "X: " + e.x;
-                var y = "Y: " + e.y
+                var y = "Y: " + e.y;
+                var coord = document.getElementById("coordinates");
+                coord.innerHTML = x + ", " + y;
         }
     </script>
 </body>

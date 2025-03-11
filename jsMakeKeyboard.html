@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #textbox{
+            border: 1px dotted green;
+            height: 200px;
+            width: 80%;
+            margin: 20px;
+        }
+        body{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard With key Events</title>
+</head>
+<body>
+    <h3> Updated Keyboard with Keyboard Events</h3>
+    <p>Type using your keyboard to see text display in the div!<br>Make sure to click the div <i>before</i> trying to type!</p>
+
+    <div id = 'textbox'>
+    </div>
+
+    <script>
+        document.body.addEventlistener("keydown", makeText);
+        function makeText(e)
+        {
+            var div = document.getElementById("textbox");
+            //Use this to prevent Shift from being printed in the textbox
+            //Clicking Shift and a key WILL add the shifted key because the event is BOTH keys
+            //Try clicking Caps Lock - what happens? How can we prevent that?
+            if(e.key != "Shift"){
+                var keyText = e.key;
+                var text = div.innerHTML;
+                text += keyText;
+                div.innerHTML = text;
+            }
+        }
+
+    </script>
+</body>
+</html>
