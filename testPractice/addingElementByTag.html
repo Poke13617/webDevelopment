@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<body>
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        var newItem = document.createElement("li");
+        newItem.innerHTML = "This is 4";
+        document.getElementById('list').appendChild(newItem);
+
+        var newPara = document.createElement('p');
+        newPara.innerHTML = "This is 5";
+        document.getElementsByTagName('body')[0].appendChild(newPara);//document.body.appendChild(newPara)
+    </script>
+</body>
+</html>

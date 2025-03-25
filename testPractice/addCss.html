@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Css using JS</title>
+    <style>
+        red-button{
+            padding:5px;
+            margin:25px;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Make me red</button>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.style.backgroundColor = "red";
+
+
+        /*Can also be solved with the following:
+        var btn = document.getElementById("btn");
+        function colorChange(){
+        btn.style.backgroundColor = "red";
+        }
+        btn.addEventListener("click", changeColor)
+
+
+OR
+        document.getElementById('btn').style.color = "red";
+OR
+        btn.setAttribute("color", "red")
+
+        */
+    </script>
+</body>
+</html>

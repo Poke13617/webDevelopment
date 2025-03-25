@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS getElementsByTagName</title>
+</head>
+<body>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <script>
+var p = document.getElementsByTagName("p");
+p[0].innerHTML = "This was changed with p[0]";
+p[1].innerHTML = "This was changed with p[1]";
+p[2].innerHTML = "This was changed with p[2]";
+p[0].style.backgroundColor = "orange";
+p[1].style.color = "red";
+p[2].style.fontSize = "20px";
+for (var paras of p){
+    paras.style.color = "goldenrod";
+    paras.style.fontWeight = "bold";
+}
+    </script>
+</body>
+</html>
